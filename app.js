@@ -54,11 +54,25 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-
+  var sumsofar = sum(a,b);
+  var totalsum = sum(sumsofar[0], c)[0];
+  var answer = a + " and " + b + " and " + c + " sum to " + totalsum + ".";
+  console.log(totalsum);
+  console.log(answer);
+  var productsofar = multiply(a,b);
+  var totalproduct = multiply(productsofar[0],c)[0];   
+  var productanswer = "The product of " + a + " and " + b + " and " + 5 + " is " + totalproduct + ".";
+  console.log(productanswer);
+  return [totalsum, totalproduct, answer, productanswer]; 
 }
+sumAndMultiply(4,7,5)
+
+
+
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
